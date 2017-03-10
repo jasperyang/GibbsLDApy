@@ -1,0 +1,6 @@
+alpha=0.5
+beta=0.1
+ntopics=10
+ndocs=2
+nwords=13
+liter=None

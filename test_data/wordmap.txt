@@ -1,0 +1,14 @@
+13
+acquisit 2
+abil 0
+begin 9
+agreem 3
+brief 10
+absenc 1
+assist 7
+administr 4
+ag 5
+amp 6
+care 11
+bas 8
+chicago 12

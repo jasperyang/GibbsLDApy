@@ -6,8 +6,10 @@
 
 和c++版本的一样，接受命令行参数，你也可以在python终端中导入包后执行函数。
 	
-	 python -est -alpha 0.5 -beta 0.1 -ntopics 100 -niters     1000 -savestep 100 -twords 20 -dfile test_data/dfile
-     
+	 python -est -alpha 0.5 -beta 0.1 -ntopics 100 -niters
+     1000 -savestep 100 -twords 20 -dfile test_data/dfile
+
+     
 参数的解释在原版的英文文档中很详细了，我懒得翻译了，甚至是复制粘贴，所以请去 ./doc/GibbsLDA++Manual.pdf 里面自行查阅。
 
 
@@ -29,7 +31,9 @@
                 nd_row.append(0)
             self.nd.append(nd_row)            
         这种样式，我自己也感到很羞愧，但是我不改了，懒。
-        
+	
+  * 经过别人使用验证，我上面这样的矩阵定义在内存使用上有很大问题，基本可以说数据量大了就不能用了，需要使用numpy里面的矩阵重新写一遍，算了，吃一堑长一智，以后注意点了。
+        
   * test_data里面的数据都是测试用例。
         
   ok,就这么多，这个算是 beta 0.0.1 ，估计也不会有新的了，大家觉得我还算辛苦的话，就 star 一个吧，我不要脸，恩。

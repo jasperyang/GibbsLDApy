@@ -29,8 +29,6 @@
 #   http://www.arbylon.net/publications/text-est.pdf
 #
 
-# 上面的是原作者的 License
-
 #!/usr/bin/env python
 # encoding: utf-8
 '''
@@ -47,7 +45,7 @@ from Model import *
 import sys
 import Constants
 
-def show_help(self) :
+def show_help() :
     print("Command line usage:\n")
     print("\tlda -est -alpha <double> -beta <double> -ntopics <int> -niters <int> -savestep <int> -twords <int> -dfile <string>\n")
     print("\tlda -estc -dir <string> -model <string> -niters <int> -savestep <int> -twords <int>\n")
@@ -57,7 +55,7 @@ def show_help(self) :
 if __name__ == '__main__' :
     lda = Model()
 
-    if (lda.init(sys.argc, sys.argv)) :
+    if (lda.init(len(sys.argv)-1, sys.argv)) :
         show_help();
 
     if (lda.model_status == Constants.MODEL_STATUS_EST or lda.model_status == Constants.MODEL_STATUS_ESTC) :

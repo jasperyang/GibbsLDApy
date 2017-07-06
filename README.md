@@ -6,7 +6,7 @@
 
 和c++版本的一样，接受命令行参数，你也可以在python终端中导入包后执行函数。
 	
-	 python -est -alpha 0.5 -beta 0.1 -ntopics 100 -niters
+	 python LDA.py -est -alpha 0.5 -beta 0.1 -ntopics 100 -niters
      1000 -savestep 100 -twords 20 -dfile test_data/dfile
 
      

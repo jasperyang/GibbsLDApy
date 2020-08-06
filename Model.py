@@ -795,7 +795,7 @@ class Model(object):
             self.p[k] = (self.nw[w][k] + self.beta) / (self.nwsum[k] + Vbeta) * (self.nd[m][k] + self.alpha) / (self.ndsum[m] + Kalpha)
 
         # cumulate multinomial parameters
-        for k in range(self.K) :
+        for k in range(1, self.K) :
             self.p[k] += self.p[k-1]
 
         # scaled sample because of unnormalized p[]         # 需要核实一下
